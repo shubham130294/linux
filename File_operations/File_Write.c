@@ -40,6 +40,11 @@ printf("\n");
 
 /* Second Read the data from the file */
 /*This sectoin of code wont work ,since the cursor lies at the extreme end of the data in the file . */
+int cursor_pos = lseek(FD,0,SEEK_CUR);
+if(cursor_pos == lseek(FD,0,SEEK_END))
+{
+    printf("\nCursor has reached at the End ,hence first close FD &  then proceed ahead \n ");
+}
 sz = read(FD,buffer,25);
 printf("Bytes Read after the write system call via read sys call : %d \n",sz);
 printf("\n");
