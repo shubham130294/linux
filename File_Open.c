@@ -17,10 +17,8 @@ if(FD == -1)
 else 
 {
         printf("File Present");
-
 }
 
 return 0; 
-
 }
 
