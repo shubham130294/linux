@@ -7,7 +7,7 @@
 int main()
 {
 
-int FD , FD1 ;
+int FD ;
 
 //FD = open("IMAGE.jpg",O_RDONLY|O_CREAT ,777);
 FD = open("IMAGE.jpg",O_RDONLY|O_CREAT ,S_IRWXU|S_IRGRP|S_IWOTH);
@@ -19,9 +19,7 @@ if(FD == -1)
 else
 {
         printf("File Present");
-
 }
 
 return 0;
-
 }
